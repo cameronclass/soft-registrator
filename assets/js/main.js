@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  let cardsSlider = new Swiper(".d-page__cards_content.swiper", {
+  new Swiper(".d-page__cards_content.swiper", {
     // Default parameters
     slidesPerView: 1,
     spaceBetween: 10,
@@ -56,17 +56,33 @@ window.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  /* function reportWindowSize() {
-    let width = window.innerWidth;
-    if (width < 1201) {
-      cardsSlider.destroy();
-      cardsSlider.init(cardsSlider);
-    }
-  }
-
-  window.addEventListener("resize", function () {
-    reportWindowSize();
-  }); */
+  new Swiper(".d-page__content_similar_slider.swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: false,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: true,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: false,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        centeredSlides: false,
+      },
+    },
+  });
 
   const tabsUniversal = document.querySelector(".tabs");
   const tabsContentUniversal = document.querySelectorAll(".tab-content");
