@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   new Swiper(".d-page__content_similar_slider.swiper", {
     slidesPerView: 1,
     spaceBetween: 10,
-    loop: false,
+    loop: true,
     breakpoints: {
       0: {
         slidesPerView: 2,
