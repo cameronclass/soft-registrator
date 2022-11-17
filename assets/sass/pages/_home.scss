@@ -1,4 +1,6 @@
 .d-page {
+    overflow-x: hidden;
+
     &__section {
         display: flex;
         justify-content: space-between;
